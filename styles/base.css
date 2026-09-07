@@ -9,6 +9,12 @@
 	--main-font: "Montserrat", sans-serif;
 }
 
+html,
+body {
+	height: 100%;
+	margin: 0;
+}
+
 header {
 	color: var(--text-color);
 }
@@ -16,6 +22,8 @@ header {
 body {
 	margin: 0;
 	padding: 0;
+	display: flex;
+	flex-direction: column;
 }
 
 html {
@@ -55,8 +63,10 @@ nav a:hover {
 }
 
 main {
+	flex: 1;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: 1fr 5fr;
 }
 
 .card {
@@ -75,7 +85,6 @@ main {
 
 h1 {
 	grid-column: 1 / 13;
-	padding: 2rem 0;
 	text-align: center;
 }
 
