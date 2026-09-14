@@ -18,6 +18,8 @@ body {
 
 header {
 	width: 100%;
+	font-size: 2rem;
+	padding: 0 1rem;
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
 }
