@@ -17,16 +17,12 @@ body {
 }
 
 header {
+	text-align: center;
 	width: 100%;
 	font-size: 2rem;
-	padding: 0 1rem;
+	padding: 1rem 0;
 	background-color: var(--secondary-color);
 	color: var(--primary-color);
-}
-
-header h1 {
-	padding: 1rem 0.5rem;
-	position: relative;
 }
 
 #menu {
@@ -50,6 +46,7 @@ header h1 {
 nav {
 	display: flex;
 	flex-direction: column;
+	margin-top: 20px;
 }
 
 nav a {
