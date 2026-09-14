@@ -82,6 +82,7 @@ main {
 }
 
 main h1 {
+	margin: 1rem;
 	justify-self: center;
 }
 
