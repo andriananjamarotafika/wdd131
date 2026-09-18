@@ -45,4 +45,9 @@
 	main h1 {
 		grid-column: 1/4;
 	}
+
+	figure img {
+		width: 200px;
+		height: 150px;
+	}
 }

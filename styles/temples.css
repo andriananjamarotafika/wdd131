@@ -91,7 +91,7 @@ figure {
 }
 
 figure img {
-	max-width: 200px;
+	width: 300px;
 	height: 150px;
 	margin: 0.5rem;
 	object-fit: cover;
