@@ -25,6 +25,8 @@ img {
 section {
 	margin: 30px 20px;
 	padding: 20px;
+	border: var(--primary-color) solid;
+	border-radius: 20px;
 }
 
 header {
@@ -76,4 +78,32 @@ dd {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+@media screen and (min-width: 768px) {
+	section {
+		position: absolute;
+		background-color: var(--transparent-color);
+		border-radius: 20px;
+		margin: 20px;
+	}
+
+	.data {
+		top: 20px;
+		left: 20px;
+	}
+
+	.weather {
+		bottom: 20px;
+		right: 20px;
+	}
+
+	.weather-icon {
+		display: none;
+	}
+
+	.weather h2::after {
+		content: " 🌤️";
+		font-size: 2rem;
+	}
 }
