@@ -1,0 +1,24 @@
+@media screen and (min-width: 768px) {
+	section {
+		position: absolute;
+		background-color: var(--transparent-color);
+		border-radius: 20px;
+		margin: 20px;
+	}
+
+	.data {
+		top: 20px;
+		left: 20px;
+	}
+
+	.weather {
+		bottom: 20px;
+		right: 20px;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	section {
+		position: absolute;
+	}
+}

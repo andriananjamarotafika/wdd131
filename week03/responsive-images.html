@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Heriniaina Andriananjamarotafika">
+    <meta name="description" content="make image to be responsive">
+    <title>Responsive Image</title>
+</head>
+<body>
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/california-temple-large.webp">
+                <source media="(min-width: 500px)" srcset="images/california-temple-medium.webp">
+                <img src="images/california-temple-small.webp" alt="California Temple" width="500" height="250">
+            </picture>
+        </div>
+    </main>
+</body>
+</html>

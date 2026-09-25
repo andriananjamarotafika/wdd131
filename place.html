@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This website shows one of my favorite place">
+    <meta name="author" content="Heriniaina Andriananjamarotafika">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <title>Paris Page</title>
+</head>
+<body>
+    <header>
+        <h1>Paris France</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/paris-large.webp" media="(min-width : 1000px)">
+            <source srcset="images/paris-medium.webp" media="(min-width : 600px)">
+            <img src="images/paris-small.webp" alt="Paris tour Eiffel" width="1400" height="500">
+        </picture>
+        <section class="data">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area:</dt><dd>587,041 sq km</dd>
+                <dt>Population:</dt><dd>27,691,018</dd>
+                <dt>Capital:</dt><dd>Antananarivo</dd>
+                <dt>Languages:</dt><dd>Malagasy, French</dd>
+                <dt>Currency:</dt><dd>Malagasy Ariary</dd>
+                <dt>Time Zone:</dt><dd>UTC+3</dd>
+                <dt>Calling Code:</dt><dd>+261</dd>
+                <dt>Internet TLD:</dt><dd>.mg</dd>
+            </dl>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <i class="weather-icon"></i>
+            <dl>
+                <dt>Temperature:</dt><dd>587,041 sq km</dd>
+                <dt>Conditions:</dt><dd>27,691,018</dd>
+                <dt>Wind:</dt><dd>Antananarivo</dd>
+                <dt>Wind Chill:</dt><dd>Malagasy, French</dd>
+            </dl>
+        </section>
+    </main>
+    <footer>
+        <p>
+            &copy; <span id="current-year"></span>🇲🇬 Heriniaina
+            Andriananjamarotafika 🇲🇬 - Madagascar - All rights reserved.
+        </p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
