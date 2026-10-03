@@ -6,18 +6,6 @@ const older = document.querySelector("#old");
 const newer = document.querySelector("#new");
 const larger = document.querySelector("#large");
 const smaller = document.querySelector("#small");
-
-let date = new Date();
-let year = date.getFullYear();
-
-hambutton.addEventListener("click", () => {
-	hambutton.classList.toggle("show");
-	headernav.forEach((link) => link.classList.toggle("show"));
-});
-
-document.getElementById("current-year").textContent = year;
-document.getElementById("lastModified").textContent = document.lastModified;
-
 const temples = [
 	{
 		templeName: "Aba Nigeria",
@@ -101,8 +89,18 @@ const temples = [
 	},
 ];
 
+const date = new Date();
+const year = date.getFullYear();
+document.getElementById("current-year").textContent = year;
+document.getElementById("lastModified").textContent = document.lastModified;
+
 document.addEventListener("DOMContentLoaded", () => {
 	showTemples(temples);
+});
+
+hambutton.addEventListener("click", () => {
+	hambutton.classList.toggle("show");
+	headernav.forEach((link) => link.classList.toggle("show"));
 });
 
 function extractYear(dedicatedDate) {
