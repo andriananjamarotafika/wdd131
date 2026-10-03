@@ -102,7 +102,7 @@ const temples = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-	showTemples(temples, "Home");
+	showTemples(temples, "Hello");
 });
 
 function extractYear(dedicatedDate) {
@@ -115,9 +115,7 @@ function showTemples(templeArray, title) {
 	main.querySelectorAll(".place-card").forEach((card) => card.remove());
 	h1.textContent = title;
 	templeArray.forEach((temple) => {
-		main.insertAdjacentHTML(
-			"beforeend",
-			`
+		main.innerHTML += `
     <article class="place-card" aria-labelledby="place-name">
         <h1 id="place-name">${temple.templeName}</h1>
         <div class="details">
@@ -127,8 +125,7 @@ function showTemples(templeArray, title) {
         </div>
         <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250">
     </article>
-`,
-		);
+`;
 	});
 }
 
