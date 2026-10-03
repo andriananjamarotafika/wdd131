@@ -102,7 +102,7 @@ const temples = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-	showTemples(temples, "Hello");
+	showTemples(temples, "Home");
 });
 
 function extractYear(dedicatedDate) {
