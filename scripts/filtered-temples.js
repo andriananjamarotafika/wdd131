@@ -122,7 +122,7 @@ function showTemples(templeArray, title) {
                 <p>Dedicated: ${temple.dedicated}</p>
                 <p>Size: ${temple.area} sq ft</p>
             </div>
-            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250">
+            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250" fetchpriority="high">
         </article>
     `,
 		)
