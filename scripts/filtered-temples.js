@@ -101,16 +101,6 @@ const temples = [
 	},
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
-	showTemples(temples);
-});
-
-function extractYear(dedicatedDate) {
-	const splitDate = dedicatedDate.split(", ");
-	const year = parseInt(splitDate[0], 10);
-	return year;
-}
-
 function showTemples(templeArray) {
 	main.querySelectorAll(".place-card").forEach((card) => card.remove());
 	templeArray.forEach((temple) => {
@@ -121,10 +111,20 @@ function showTemples(templeArray) {
         <p>Dedicated : ${temple.dedicated}</p>
         <p>Size: ${temple.area} sq ft</p>
     </div>
-	<img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" width="400" height="250">
+	<img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250">
 </article>
 `;
 	});
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+	showTemples(temples);
+});
+
+function extractYear(dedicatedDate) {
+	const splitDate = dedicatedDate.split(", ");
+	const year = parseInt(splitDate[0], 10);
+	return year;
 }
 
 const templeLarger = temples.filter((temple) => temple.area > 90000);
