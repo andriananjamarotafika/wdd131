@@ -8,9 +8,6 @@
 	--primary-color: rgb(245, 242, 242);
 	--secondary-color: rgb(26, 26, 109);
 	--text-hover: rgb(40, 39, 39);
-	--img-card-shadow: rgba(0, 0, 0, 0.42);
-	--card-background: rgb(238, 238, 238);
-	--card-border: rgb(210, 210, 210);
 }
 
 body {
@@ -90,9 +87,10 @@ main h1 {
 }
 .place-card {
 	width: min(352px, 100%);
-	padding: 30px;
-	border: 1px solid var(--card-border);
-	background: var(--card-background);
+	padding: 18px 19px 19px;
+	border: 1px solid #d2d2d2;
+	background: #eee;
+	color: #090909;
 	text-align: center;
 }
 
@@ -104,9 +102,9 @@ main h1 {
 
 .details {
 	margin: 0 0 19px;
+	font-family: Georgia, "Times New Roman", serif;
 	font-size: 14px;
 	line-height: 19px;
-	height: 70px;
 }
 
 .details p {
@@ -118,7 +116,7 @@ main h1 {
 	width: 100%;
 	height: 180px;
 	object-fit: cover;
-	box-shadow: 0 2px 13px 3px var(--img-card-shadow);
+	box-shadow: 0 2px 13px 3px rgba(0, 0, 0, 0.42);
 }
 
 footer {

@@ -103,7 +103,7 @@ temples.forEach((temple) => {
         <p>Dedicated : ${temple.dedicated}</p>
         <p>Size: ${temple.area} sq ft</p>
     </div>
-	<img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy">
+	<img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" width="400" height="250">
 </article>
 `;
 });
