@@ -114,7 +114,6 @@ function extractYear(dedicatedDate) {
 function showTemples(templeArray, title) {
 	h1.textContent = title;
 	main.querySelectorAll(".place-card").forEach((card) => card.remove());
-
 	const cards = templeArray
 		.map(
 			(temple) => `
@@ -125,7 +124,7 @@ function showTemples(templeArray, title) {
                 <p>Dedicated: ${temple.dedicated}</p>
                 <p>Size: ${temple.area} sq ft</p>
             </div>
-            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250" fetchpriority="high">
+            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250" loading="lazy" fetchpriority="high">
         </article>
     `,
 		)
