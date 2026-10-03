@@ -112,6 +112,9 @@ function extractYear(dedicatedDate) {
 }
 
 function showTemples(templeArray, title) {
+	h1.textContent = title;
+	main.querySelectorAll(".place-card").forEach((card) => card.remove());
+
 	const cards = templeArray
 		.map(
 			(temple) => `
@@ -128,7 +131,7 @@ function showTemples(templeArray, title) {
 		)
 		.join("");
 
-	main.innerHTML = `<h1>${title}</h1>${cards}`;
+	main.insertAdjacentHTML("beforeend", cards);
 }
 
 const templeLarger = temples.filter((temple) => temple.area > 90000);
