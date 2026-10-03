@@ -112,21 +112,23 @@ function extractYear(dedicatedDate) {
 }
 
 function showTemples(templeArray, title) {
-	main.querySelectorAll(".place-card").forEach((card) => card.remove());
-	h1.textContent = title;
-	templeArray.forEach((temple) => {
-		main.innerHTML += `
-    <article class="place-card" aria-labelledby="place-name">
-        <h1 id="place-name">${temple.templeName}</h1>
-        <div class="details">
-            <p>Location : ${temple.location}</p>
-            <p>Dedicated : ${temple.dedicated}</p>
-            <p>Size: ${temple.area} sq ft</p>
-        </div>
-        <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250">
-    </article>
-`;
-	});
+	const cards = templeArray
+		.map(
+			(temple) => `
+        <article class="place-card">
+            <h2>${temple.templeName}</h2>
+            <div class="details">
+                <p>Location: ${temple.location}</p>
+                <p>Dedicated: ${temple.dedicated}</p>
+                <p>Size: ${temple.area} sq ft</p>
+            </div>
+            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250">
+        </article>
+    `,
+		)
+		.join("");
+
+	main.innerHTML = `<h1>${title}</h1>${cards}`;
 }
 
 const templeLarger = temples.filter((temple) => temple.area > 90000);
