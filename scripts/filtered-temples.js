@@ -1,6 +1,12 @@
 const hambutton = document.querySelector("#menu");
 const headernav = document.querySelectorAll("nav a");
 const main = document.querySelector("main");
+const home = document.querySelector("#home");
+const older = document.querySelector("#old");
+const newer = document.querySelector("#new");
+const larger = document.querySelector("#large");
+const smaller = document.querySelector("#small");
+
 let date = new Date();
 let year = date.getFullYear();
 
@@ -95,8 +101,20 @@ const temples = [
 	},
 ];
 
-temples.forEach((temple) => {
-	main.innerHTML += `<article class="place-card" aria-labelledby="place-name">
+document.addEventListener("DOMContentLoaded", () => {
+	showTemples(temples);
+});
+
+function extractYear(dedicatedDate) {
+	const splitDate = dedicatedDate.split(", ");
+	const year = parseInt(splitDate[0], 10);
+	return year;
+}
+
+function showTemples(templeArray) {
+	main.querySelectorAll(".place-card").forEach((card) => card.remove());
+	templeArray.forEach((temple) => {
+		main.innerHTML += `<article class="place-card" aria-labelledby="place-name">
     <h1 id="place-name">${temple.templeName}</h1>
     <div class="details">
         <p>Location : ${temple.location}</p>
@@ -106,4 +124,20 @@ temples.forEach((temple) => {
 	<img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" width="400" height="250">
 </article>
 `;
-});
+	});
+}
+
+const templeLarger = temples.filter((temple) => temple.area > 90000);
+const templeSmaller = temples.filter((temple) => temple.area > 10000);
+const templeNewer = temples.filter(
+	(temple) => extractYear(temple.dedicated) > 2000,
+);
+const templeOlder = temples.filter(
+	(temple) => extractYear(temple.dedicated) < 1900,
+);
+
+home.addEventListener("click", () => showTemples(temples));
+older.addEventListener("click", () => showTemples(templeOlder));
+newer.addEventListener("click", () => showTemples(templeNewer));
+larger.addEventListener("click", () => showTemples(templeLarger));
+smaller.addEventListener("click", () => showTemples(templeSmaller));

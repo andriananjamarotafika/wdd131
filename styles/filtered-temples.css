@@ -78,8 +78,10 @@ main {
 	flex: 1;
 	display: grid;
 	margin: 0 auto;
+	padding: 2rem;
 	grid-template-columns: 1fr;
 	align-items: center;
+	justify-items: center;
 	gap: 2rem;
 }
 
