@@ -6,9 +6,9 @@ const older = document.querySelector("#old");
 const newer = document.querySelector("#new");
 const larger = document.querySelector("#large");
 const smaller = document.querySelector("#small");
-
-let date = new Date();
-let year = date.getFullYear();
+const h1 = document.querySelector("main h1");
+const date = new Date();
+const year = date.getFullYear();
 
 hambutton.addEventListener("click", () => {
 	hambutton.classList.toggle("show");
@@ -102,7 +102,7 @@ const temples = [
 ];
 
 document.addEventListener("DOMContentLoaded", () => {
-	showTemples(temples);
+	showTemples(temples, "Home");
 });
 
 function extractYear(dedicatedDate) {
@@ -111,19 +111,24 @@ function extractYear(dedicatedDate) {
 	return year;
 }
 
-function showTemples(templeArray) {
+function showTemples(templeArray, title) {
 	main.querySelectorAll(".place-card").forEach((card) => card.remove());
+	h1.textContent = title;
 	templeArray.forEach((temple) => {
-		main.innerHTML += `<article class="place-card" aria-labelledby="place-name">
-    <h1 id="place-name">${temple.templeName}</h1>
-    <div class="details">
-        <p>Location : ${temple.location}</p>
-        <p>Dedicated : ${temple.dedicated}</p>
-        <p>Size: ${temple.area} sq ft</p>
-    </div>
-	<img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250">
-</article>
-`;
+		main.insertAdjacentHTML(
+			"beforeend",
+			`
+    <article class="place-card" aria-labelledby="place-name">
+        <h1 id="place-name">${temple.templeName}</h1>
+        <div class="details">
+            <p>Location : ${temple.location}</p>
+            <p>Dedicated : ${temple.dedicated}</p>
+            <p>Size: ${temple.area} sq ft</p>
+        </div>
+        <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250">
+    </article>
+`,
+		);
 	});
 }
 
@@ -136,8 +141,8 @@ const templeOlder = temples.filter(
 	(temple) => extractYear(temple.dedicated) < 1900,
 );
 
-home.addEventListener("click", () => showTemples(temples));
-older.addEventListener("click", () => showTemples(templeOlder));
-newer.addEventListener("click", () => showTemples(templeNewer));
-larger.addEventListener("click", () => showTemples(templeLarger));
-smaller.addEventListener("click", () => showTemples(templeSmaller));
+home.addEventListener("click", () => showTemples(temples, "Home"));
+older.addEventListener("click", () => showTemples(templeOlder, "Old"));
+newer.addEventListener("click", () => showTemples(templeNewer, "New"));
+larger.addEventListener("click", () => showTemples(templeLarger, "Large"));
+smaller.addEventListener("click", () => showTemples(templeSmaller, "Small"));
