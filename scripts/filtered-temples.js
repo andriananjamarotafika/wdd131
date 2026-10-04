@@ -7,6 +7,7 @@ const newer = document.querySelector("#new");
 const larger = document.querySelector("#large");
 const smaller = document.querySelector("#small");
 const h1 = document.querySelector("main h1");
+const resultsStatus = document.querySelector("#results-status");
 const date = new Date();
 const year = date.getFullYear();
 
@@ -112,24 +113,44 @@ function extractYear(dedicatedDate) {
 }
 
 function showTemples(templeArray, title) {
+	const cards = document.createDocumentFragment();
+	templeArray.forEach((temple) => cards.append(createTempleCard(temple)));
+
 	h1.textContent = title;
-	main.querySelectorAll(".place-card").forEach((card) => card.remove());
-	const cards = templeArray
-		.map(
-			(temple) => `
-				<article class="place-card">
-					<h2>${temple.templeName}</h2>
-					<div class="details">
-						<p>Location: ${temple.location}</p>
-						<p>Dedicated: ${temple.dedicated}</p>
-						<p>Size: ${temple.area} sq ft</p>
-					</div>
-					<img src="${temple.imageUrl}" alt="${temple.templeName} Temple" width="400" height="250" loading="lazy">
-				</article>
-			`,
-		)
-		.join("");
-	main.insertAdjacentHTML("beforeend", cards);
+	main.replaceChildren(h1, resultsStatus, cards);
+	const templeWord = templeArray.length === 1 ? "temple" : "temples";
+	resultsStatus.textContent = `${templeArray.length} ${templeWord} shown: ${title}.`;
+}
+
+function createTempleCard(temple) {
+	const article = document.createElement("article");
+	article.className = "place-card";
+
+	const heading = document.createElement("h2");
+	heading.textContent = temple.templeName;
+
+	const details = document.createElement("div");
+	details.className = "details";
+	[
+		`Location: ${temple.location}`,
+		`Dedicated: ${temple.dedicated}`,
+		`Size: ${temple.area} sq ft`,
+	].forEach((text) => {
+		const paragraph = document.createElement("p");
+		paragraph.textContent = text;
+		details.append(paragraph);
+	});
+
+	const image = document.createElement("img");
+	image.src = temple.imageUrl;
+	image.alt = `${temple.templeName} Temple`;
+	image.width = 400;
+	image.height = 250;
+	image.loading = "lazy";
+	image.decoding = "async";
+
+	article.append(heading, details, image);
+	return article;
 }
 
 const templeLarger = temples.filter((temple) => temple.area > 90000);
