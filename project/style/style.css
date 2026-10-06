@@ -6,10 +6,15 @@ body {
 	line-height: 1.7;
 }
 
+h1 {
+	color: #355e3b;
+	text-align: center;
+}
+
 main {
 	width: min(900px, calc(100% - 2rem));
 	margin: 0 auto;
-	padding: 3rem 0;
+	padding-bottom: 3rem;
 }
 
 p {
@@ -47,7 +52,7 @@ footer {
 @media (max-width: 600px) {
 	main {
 		width: min(100% - 1rem, 900px);
-		padding: 1rem 0;
+		padding-bottom: 1rem;
 	}
 
 	p {
