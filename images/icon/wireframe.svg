@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1400" viewBox="0 0 1000 1400">
+<rect width="1000" height="1400" fill="white"/>
+<g fill="none" stroke="#555" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<!-- page and header -->
+<rect x="75" y="45" width="850" height="1310" rx="3" stroke-dasharray="8 7"/>
+<rect x="110" y="75" width="780" height="45"/><path d="M130 97h190M640 97h205"/>
+<!-- hero -->
+<rect x="110" y="145" width="780" height="300"/>
+<path d="M145 200h270M145 225h235M145 250h250M145 275h185M145 308h120v45H145z"/>
+<rect x="510" y="175" width="340" height="240" stroke-dasharray="9 7"/><path d="M530 395l95-100 60 50 55-70 90 120"/>
+<!-- products -->
+<path d="M110 475h780"/><path d="M135 505h260M135 530h200"/>
+<g><rect x="130" y="565" width="220" height="165" stroke-dasharray="8 7"/><rect x="390" y="565" width="220" height="165" stroke-dasharray="8 7"/><rect x="650" y="565" width="220" height="165" stroke-dasharray="8 7"/><path d="M145 720l60-65 40 35 45-50 45 80M405 720l60-65 40 35 45-50 45 80M665 720l60-65 40 35 45-50 45 80"/></g>
+<path d="M130 755h140M130 775h85M390 755h140M390 775h85M650 755h140M650 775h85"/>
+<!-- story -->
+<path d="M110 815h780"/><rect x="130" y="850" width="340" height="220" stroke-dasharray="8 7"/><path d="M150 1050l80-90 65 45 50-70 105 115"/>
+<path d="M530 870h290M530 900h260M530 930h285M530 960h260M530 990h275M530 1020h180"/>
+<!-- benefits -->
+<path d="M110 1100h780"/><rect x="130" y="1125" width="220" height="100"/><rect x="390" y="1125" width="220" height="100"/><rect x="650" y="1125" width="220" height="100"/><path d="M160 1155h160M160 1180h130M420 1155h160M420 1180h130M680 1155h160M680 1180h130"/>
+<!-- contact/footer -->
+<rect x="110" y="1250" width="780" height="60"/><path d="M260 1275h480M375 1295h250"/><path d="M110 1325h780"/>
+</g>
+<g fill="#444" font-family="Arial,sans-serif" font-size="15">
+<text x="130" y="106">LOGO / BRAND</text><text x="650" y="106">NAVIGATION / CART</text>
+<text x="150" y="185">INTRODUCTION / HEADLINE</text><text x="555" y="205">HERO IMAGE</text><text x="156" y="339">SHOP BUTTON</text>
+<text x="135" y="495">FEATURED PRODUCTS</text><text x="155" y="640">PRODUCT IMAGE</text><text x="415" y="640">PRODUCT IMAGE</text><text x="675" y="640">PRODUCT IMAGE</text><text x="135" y="750">PRODUCT NAME / PRICE</text><text x="395" y="750">PRODUCT NAME / PRICE</text><text x="655" y="750">PRODUCT NAME / PRICE</text>
+<text x="155" y="955">MAKER / CRAFT PHOTO</text><text x="540" y="860">ABOUT THE BRAND</text>
+<text x="160" y="1148">HANDMADE</text><text x="420" y="1148">NATURAL MATERIALS</text><text x="680" y="1148">CUSTOM ORDERS</text>
+<text x="345" y="1273">CONTACT / QUESTIONS</text><text x="380" y="1345">FOOTER: SOCIAL · SHIPPING · CONTACT</text>
+</g>
+<g fill="#222" font-family="Arial,sans-serif">
+<text x="75" y="30" font-size="22" font-weight="bold">ANDRIANRAFFIA — HOMEPAGE WIREFRAME</text>
+<text x="75" y="1385" font-size="14">ROUGH STRUCTURE SKETCH · boxes indicate content areas; dashed boxes are image placeholders</text>
+</g>
+</svg>
