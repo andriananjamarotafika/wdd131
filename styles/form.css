@@ -1,0 +1,112 @@
+:root {
+	--primary-color: rgb(45, 45, 120);
+	--secondary-color: rgb(238, 231, 231);
+	--alert: rgb(242, 70, 70);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+
+header h1,
+footer {
+	display: block;
+	text-align: center;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	padding: 1rem;
+}
+
+form {
+	max-width: 500px;
+	margin: 1rem auto;
+	padding: 1rem;
+	background-color: var(--secondary-color);
+	border-radius: 10px;
+	font-size: 18px;
+}
+
+.confirmation {
+	max-width: 500px;
+	margin: 1rem auto;
+	padding: 2rem 1rem;
+	background-color: var(--secondary-color);
+	border-radius: 10px;
+	font-size: 18px;
+	text-align: center;
+}
+
+.confirmation h2 {
+	margin-bottom: 0.75rem;
+}
+
+.confirmation p {
+	margin-bottom: 1rem;
+}
+
+.head2 {
+	display: block;
+	margin-top: 1.5rem;
+}
+
+input[type="date"],
+input[type="text"],
+textarea,
+select {
+	display: block;
+	width: 100%;
+	height: 40px;
+	margin: 0.5rem 0;
+	border-radius: 8px;
+	appearance: none;
+	padding: 0.5rem;
+}
+
+.product {
+	display: flex;
+	justify-content: space-around;
+}
+
+.product label {
+	text-align: center;
+}
+
+.features label {
+	display: block;
+}
+
+input[type="submit"] {
+	width: 100%;
+	height: 40px;
+	font-weight: bolder;
+	font-size: 18px;
+	border-radius: 8px;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+}
+
+input:required,
+select:required {
+	border: solid 2px var(--alert);
+}
+
+#review {
+	height: 100px;
+}
+
+span {
+	font-size: 15px;
+	font-style: italic;
+}

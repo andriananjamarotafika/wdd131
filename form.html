@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is a website to ask user to fulfill a form for review product">
+        <meta name="author" content="Heriniaina Andriananjamarotafika">
+        <link rel="stylesheet" href="styles/form.css">
+        <script src="scripts/form.js" defer></script>
+        <title>Product review form</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Product review</h1>
+        </header>
+        <main>
+            <form method="get" action="review.html">
+                <label class="head2">Product
+                    <select name="product" id="product" required>
+                        <option value="" disabled selected>Select a product ... &#9662</option>
+                    </select>
+                    <div class="head2">Overall Rating</div>
+                    <div class="product">
+                        <label>
+                            <div>&#11088;</div>
+                            <input type="radio" name="rate" id="rate-1" required>
+                        </label>
+                        <label>
+                            <div>&#11088;&#11088;</div><input type="radio" name="rate" id="rate-2" required>
+                        </label>
+                        <label>
+                            <div>&#11088;&#11088;&#11088;</div><input type="radio" name="rate" id="rate-3" required>
+                        </label>
+                        <label>
+                            <div>&#11088;&#11088;&#11088;&#11088;</div><input type="radio" name="rate" id="rate-4"
+                                required>
+                        </label>
+                        <label>
+                            <div>&#11088;&#11088;&#11088;&#11088;&#11088;</div><input type="radio" name="rate"
+                                id="rate-5" required>
+                        </label>
+                    </div>
+
+                </label>
+                <label class="head2">Date of Installation <input type="date" name="date" id="date" required></label>
+                <div class="head2">Which features did you find useful in the product?</div>
+                <div><i>(check all that apply)</i></div>
+                <div class="features">
+                    <label><input type="checkbox" name="features" value="Durability" id="feat-1">Durability</label>
+                    <label><input type="checkbox" name="features" value="Ease of use" id="feat-2">Easy to use</label>
+                    <label><input type="checkbox" name="features" value="Performance" id="feat-3">Performance</label>
+                    <label><input type="checkbox" name="features" value="Design" id="feat-4">Design</label>
+                </div>
+                <label for="review" class="head2">Written review <span>(optional)</span></label>
+                <textarea id="review" name="review"></textarea>
+                <label class="head2">Your Name<span>(optional)</span><input type="text" id="name" name="name"></label>
+
+                <input type="submit" value="Post Review">
+            </form>
+        </main>
+        <footer>
+            <p>
+                &copy; <span id="current-year"></span>🇲🇬 Heriniaina
+                Andriananjamarotafika 🇲🇬 - Madagascar - All rights reserved.
+            </p>
+            <p id="lastModified"></p>
+        </footer>
+
+
+    </body>
+
+</html>
