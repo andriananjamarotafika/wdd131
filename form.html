@@ -17,45 +17,51 @@
         </header>
         <main>
             <form method="get" action="review.html">
-                <label class="head2">Product
+                <label for="product" class="head2">Product
                     <select name="product" id="product" required>
                         <option value="" disabled selected>Select a product ... &#9662;</option>
                     </select> </label>
                 <div class="head2">Overall Rating</div>
                 <div class="product">
-                    <label>
+                    <label for="rate-1">
                         <span>&#11088;</span>
-                        <input type="radio" name="rate" id="rate-1" required>
+                        <input type="radio" name="rate" id="rate-1" value="Bad" required>
                     </label>
-                    <label>
-                        <span>&#11088;&#11088;</span><input type="radio" name="rate" id="rate-2" required>
+                    <label for="rate-2">
+                        <span>&#11088;&#11088;</span><input type="radio" name="rate" id="rate-2" value="Fair" required>
                     </label>
-                    <label>
-                        <span>&#11088;&#11088;&#11088;</span><input type="radio" name="rate" id="rate-3" required>
+                    <label for="rate-3">
+                        <span>&#11088;&#11088;&#11088;</span><input type="radio" name="rate" id="rate-3" value="Good"
+                            required>
                     </label>
-                    <label>
+                    <label for="rate-4">
                         <span>&#11088;&#11088;&#11088;&#11088;</span><input type="radio" name="rate" id="rate-4"
-                            required>
+                            value="Very Good" required>
                     </label>
-                    <label>
+                    <label for="rate-5">
                         <span>&#11088;&#11088;&#11088;&#11088;&#11088;</span><input type="radio" name="rate" id="rate-5"
-                            required>
+                            value="Excellent" required>
                     </label>
                 </div>
 
 
-                <label class="head2">Date of Installation <input type="date" name="date" id="date" required></label>
+                <label class="head2" for="date">Date of Installation <input type="date" name="date" id="date"
+                        required></label>
                 <div class="head2">Which features did you find useful in the product?</div>
                 <div><i>(check all that apply)</i></div>
                 <div class="features">
-                    <label><input type="checkbox" name="features" value="Durability" id="feat-1">Durability</label>
-                    <label><input type="checkbox" name="features" value="Ease of use" id="feat-2">Easy to use</label>
-                    <label><input type="checkbox" name="features" value="Performance" id="feat-3">Performance</label>
-                    <label><input type="checkbox" name="features" value="Design" id="feat-4">Design</label>
+                    <label for="feat-1"><input type="checkbox" name="features" value="Durability"
+                            id="feat-1">Durability</label>
+                    <label for="feat-2"><input type="checkbox" name="features" value="Ease of use" id="feat-2">Easy to
+                        use</label>
+                    <label for="feat-3"><input type="checkbox" name="features" value="Performance"
+                            id="feat-3">Performance</label>
+                    <label for="feat-4"><input type="checkbox" name="features" value="Design" id="feat-4">Design</label>
                 </div>
                 <label for="review" class="head2">Written review <span>(optional)</span></label>
                 <textarea id="review" name="review"></textarea>
-                <label class="head2">Your Name<span>(optional)</span><input type="text" id="name" name="name"></label>
+                <label class="head2" for="name">Your Name<span>(optional)</span><input type="text" id="name"
+                        name="name"></label>
 
                 <input type="submit" value="Post Review">
             </form>

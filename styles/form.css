@@ -70,7 +70,6 @@ select {
 	height: 40px;
 	margin: 0.5rem 0;
 	border-radius: 8px;
-	appearance: none;
 	padding: 0.5rem;
 }
 
@@ -110,4 +109,11 @@ span {
 	display: block;
 	font-size: 15px;
 	font-style: italic;
+}
+
+@media (max-width: 600px) {
+	select,
+	input[type="date"] {
+		appearance: none;
+	}
 }
