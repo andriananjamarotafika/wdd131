@@ -4,7 +4,6 @@ let year = date.getFullYear();
 document.getElementById("current-year").textContent = year;
 document.getElementById("lastModified").textContent = document.lastModified;
 const listProduct = document.getElementById("product");
-const submit = document.querySelector("input[type='submit']");
 const products = [
 	{
 		id: "fc-1888",
@@ -42,17 +41,11 @@ if (listProduct) {
 	listProduct.insertAdjacentHTML("beforeend", listOption);
 }
 
-submit.addEventListener("submit", AddViewCount());
-
-function AddViewCount() {
-	let count = 0;
-	if (getCount == 0) {
-		setNewCount(1);
-	} else {
-		count = getCount();
-		count += 1;
-		setNewCount(count);
-	}
+const form = document.querySelector("form");
+if (form) {
+	form.addEventListener("submit", () => {
+		setNewCount((getCount() || 0) + 1);
+	});
 }
 
 function setNewCount(index) {
@@ -61,4 +54,9 @@ function setNewCount(index) {
 
 function getCount() {
 	return JSON.parse(localStorage.getItem("count"));
+}
+
+const countDisplay = document.querySelector(".confirmation span");
+if (countDisplay) {
+	countDisplay.textContent = `${getCount() || 0}`;
 }
