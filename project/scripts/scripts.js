@@ -82,34 +82,55 @@ const products = [
 const productGrid = document.querySelector("#product-grid");
 const productCount = document.querySelector("#product-count");
 
-products.forEach((product) => {
-	const card = document.createElement("article");
-	card.className = "catalog-product";
+if (productGrid)
+	products.forEach((product) => {
+		const card = document.createElement("article");
+		card.className = "catalog-product";
 
-	const image = document.createElement("img");
-	image.src = `images/${product.image}`;
-	image.alt = product.alt;
-	image.width = 400;
-	image.height = 300;
-	image.loading = "lazy";
+		const image = document.createElement("img");
+		image.src = `images/${product.image}`;
+		image.alt = product.alt;
+		image.width = 400;
+		image.height = 300;
+		image.loading = "lazy";
 
-	const body = document.createElement("div");
-	body.className = "catalog-product__body";
+		const body = document.createElement("div");
+		body.className = "catalog-product__body";
 
-	const type = document.createElement("p");
-	type.className = "catalog-product__type";
-	type.textContent = product.type;
+		const type = document.createElement("p");
+		type.className = "catalog-product__type";
+		type.textContent = product.type;
 
-	const name = document.createElement("h2");
-	name.textContent = product.name;
+		const name = document.createElement("h2");
+		name.textContent = product.name;
 
-	const description = document.createElement("p");
-	description.className = "catalog-product__description";
-	description.textContent = product.description;
+		const description = document.createElement("p");
+		description.className = "catalog-product__description";
+		description.textContent = product.description;
 
-	body.append(type, name, description);
-	card.append(image, body);
-	productGrid.append(card);
-});
+		body.append(type, name, description);
+		card.append(image, body);
+		productGrid.append(card);
+	});
 
-productCount.textContent = `${products.length} pieces`;
+if (productCount) productCount.textContent = `${products.length} pieces`;
+
+const form = document.querySelector(".contact-form");
+if (form) {
+	form.addEventListener("submit", () => {
+		setNewCount((getCount() || 0) + 1);
+	});
+}
+
+function setNewCount(index) {
+	localStorage.setItem("count", JSON.stringify(index));
+}
+
+function getCount() {
+	return JSON.parse(localStorage.getItem("count"));
+}
+
+const countDisplay = document.querySelector(".confirmation span");
+if (countDisplay) {
+	countDisplay.textContent = `${getCount() || 0}`;
+}
