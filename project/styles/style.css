@@ -79,6 +79,16 @@ header {
 	color: var(--text-brown);
 }
 
+img {
+	border-radius: 5px;
+	object-fit: cover;
+}
+.product img,
+.catalog-product img {
+	display: block;
+	width: 100%;
+}
+
 .button {
 	display: inline-block;
 	background: var(--green);
@@ -124,7 +134,8 @@ header {
 	gap: 50px;
 }
 
-.catalog-section {
+.catalog-section,
+.contact-section {
 	min-height: calc(100vh - 170px);
 }
 .catalog-head {
@@ -157,10 +168,7 @@ header {
 	background: var(--white);
 }
 .catalog-product img {
-	display: block;
-	width: 100%;
 	aspect-ratio: 4 / 3;
-	object-fit: cover;
 }
 .catalog-product__body {
 	padding: 16px 18px 18px;
@@ -182,16 +190,6 @@ header {
 	color: var(--text-brown);
 	font-size: 14px;
 	line-height: 1.55;
-}
-
-.product img {
-	display: block;
-	width: 100%;
-}
-
-img {
-	border-radius: 5px;
-	object-fit: cover;
 }
 
 .product h3 {
@@ -239,9 +237,6 @@ img {
 	margin-top: 0;
 }
 
-.contact-section {
-	min-height: calc(100vh - 170px);
-}
 .contact-heading {
 	max-width: 700px;
 	margin: 0 0 32px;
@@ -279,7 +274,11 @@ img {
 	border-radius: 5px;
 	background: var(--cream);
 }
-
+.contact-fields {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 18px;
+}
 .form-field {
 	display: flex;
 	flex-direction: column;
@@ -323,8 +322,8 @@ img {
 }
 
 footer {
-	background: #30271f;
-	color: #f7f0e8;
+	background: var(--ink);
+	color: var(--cream);
 	padding: 20px 0;
 	font-size: 13px;
 	text-align: center;
